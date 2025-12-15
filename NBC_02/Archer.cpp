@@ -5,12 +5,12 @@ Archer::Archer(string nickname) : Player(nickname)
 {
 	job_name = "궁수";
 	level = 5;
-	HP = 100;
-	MP = 100;
-	power = 50;
-	defence = 10;
-	accuracy = 80;
-	speed = 50;
+	setHP(100);
+	setMP(100);
+	setPower(50);
+	setDefence(15);
+	setAccuracy(80);
+	setSpeed(50);
 }
 
 void Archer::attack()
