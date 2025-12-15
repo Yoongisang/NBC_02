@@ -23,18 +23,18 @@ public:
     void attack(Player* player);
 
     // 몬스터의 속성값을 리턴하는 get 함수
-    string getName();
-    int getHP();
-    int getPower();
-    int getDefence();
-    int getSpeed();
+    string getName() { return name; }
+    int getHP() { return HP; }
+    int getPower() { return power; }
+    int getDefence() { return defence; }
+    int getSpeed() { return speed; }
 
     // 몬스터의 속성값을 정의하는 set 함수
-    void setName(string name);
-    void setHP(int HP);
-    void setPower(int power);
-    void setDefence(int defence);
-    void setSpeed(int speed);
+    void setName(string name) { this->name = name; }
+    void setHP(int HP) { this->HP = HP; }
+    void setPower(int power) { this->power = power; }
+    void setDefence(int defence) { this->defence = defence; }
+    void setSpeed(int speed) { this->speed = speed; }
 
 protected:
     string name; // 몬스터의 이름

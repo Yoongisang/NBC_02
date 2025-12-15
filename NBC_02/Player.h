@@ -1,6 +1,8 @@
 ﻿#pragma once
 #include <string>
 
+class Monster;
+
 using namespace std;
 
 class Player {
@@ -8,6 +10,7 @@ public:
     Player(string nickname);
 
     virtual void attack() = 0;
+    virtual void attack(Monster* monster) = 0;
     void printPlayerStatus();
 
     // getter 함수
