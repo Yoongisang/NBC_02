@@ -7,13 +7,14 @@ using namespace std;
 
 class Player {
 public:
-    Player(string nickname);
+    // 부모 생성자에서는 닉네임만 초기화(한줄로 끝나기 때문에 헤더에 정의)
+    Player(string nickname) : nickname(nickname) {}
 
     virtual void attack() = 0;
     virtual void attack(Monster* monster) = 0;
     void printPlayerStatus();
 
-    // getter 함수
+    // getter 함수 (한줄로 끝나기 때문에 헤더에 정의)
     string getJobName() const { return job_name; }
     string getNickname() const { return nickname; }
     int getLevel() const { return level; }
@@ -24,7 +25,7 @@ public:
     int getAccuracy() const { return accuracy; }
     int getSpeed() const { return speed; }
 
-    // setter 함수
+    // setter 함수 (한줄로 끝나기 때문에 헤더에 정의)
     void setNickname(string nickname) { this->nickname = nickname; }
     void setHP(int HP) { this->HP = HP; }
     void setMP(int MP) { this->MP = MP; }
@@ -34,6 +35,7 @@ public:
     void setSpeed(int speed) { this->speed = speed; }
 
 protected:
+    // 멤버 변수
     string job_name;
     string nickname;
     int level;

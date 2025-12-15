@@ -24,7 +24,7 @@ void Thief::attack(Monster* monster)
 {
 	int damage = max(1, getPower() - monster->getDefence());
 
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 5; i++)
 	{
 		cout << monster->getName() << "에게 단검으로 " << damage / 5 << "의 피해를 입혔다!" << '\n';
 	}

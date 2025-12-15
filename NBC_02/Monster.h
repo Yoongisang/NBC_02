@@ -22,14 +22,14 @@ public:
     // - 플레이어가 생존했을 경우, 플레이어의 남은 HP를 출력합니다.
     void attack(Player* player);
 
-    // 몬스터의 속성값을 리턴하는 get 함수
+    // 몬스터의 속성값을 리턴하는 get 함수(한줄로 끝나기 때문에 헤더에 정의)
     string getName() { return name; }
     int getHP() { return HP; }
     int getPower() { return power; }
     int getDefence() { return defence; }
     int getSpeed() { return speed; }
 
-    // 몬스터의 속성값을 정의하는 set 함수
+    // 몬스터의 속성값을 정의하는 set 함수(한줄로 끝나기 때문에 헤더에 정의)
     void setName(string name) { this->name = name; }
     void setHP(int HP) { this->HP = HP; }
     void setPower(int power) { this->power = power; }

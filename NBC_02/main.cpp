@@ -48,19 +48,26 @@ int main() {
         return 1;
     }
 
+    // 플레이어 직업 생성 후 몬스터 생성
     Monster* monster = new Monster("슬라임");
     
+    // 몬스터가 플레이어 먼저 공격(몬스터가 더 약하기 때문)
     monster->attack(player);
 
+    // 플레이어가 살아있다면 몬스터 대상 공격(도적은 슬라임에게 죽기때문에 공격이 안됨)
     if (player->getHP() > 0)
     {
         player->attack(monster);
     }
 
+    // 플레이어 Status 표기
     player->printPlayerStatus();
 
+    // 플레이어 동적할당 해제 스위치 문에서 캐릭터 생성이 안될 수 있기때문에 체크
     if (player != nullptr)
         delete player;
+    // 몬스터는 반드시 생성하기 때문에 해제
+    delete monster;
 
     return 0;
 }
